@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/mocha-css" rel="stylesheet" />
+
+  <script src="https://unpkg.com/mocha/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // 기본 셋업
+  </script>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script> -->
+  <script src="https://www.chaijs.com/chai.js"></script>
+  <script>
+    // chai의 다양한 기능 중, assert를 전역에 선언합니다.
+    let assert = chai.assert;
+  </script>
+</head>
+<body>
+  <script>
+    function pow(x, n) {
+      // if (n == 1) return 5;
+      // if (n == 3) return 125;
+      // if (n == 2) return 123;
+      if (n < 0) return NaN;
+      if (Math.round(n) != n) return NaN;
+
+      let result = 1;
+      for (let i = 0; i < n; i++) {
+        result *= x;
+      }
+      return result;
+    }
+  </script>
+  <script src="test.js">
+  </script>
+  <div id="mocha"></div>
+  <script>
+    mocha.run();
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+
+<form>
+  id : <input name="id" type="text"/>
+  password : <input name="password" type="password"/>
+  title : <input name="title" type="text"/>
+  <button type="submit">제출</button>
+</form>
+
+<script>
+  $form = document.querySelector('form');
+  $form.addEventListener("submit", (event) => {
+    console.log(event.target.id.value);
+    console.log(event.target.password.value);
+    console.log(event.target.title.value);
+  });
+</script>

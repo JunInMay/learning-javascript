@@ -1,0 +1,17 @@
+<head>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="test-checkbox">테스트 체크 박스</ㅅ>
+</body>
+
+
+<script>
+  let $testButton = document.querySelector("#test-checkbox");
+  $testButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    console.log("아무런 동작도 안 한다.")
+  })
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  result0 : <span class="result"></span><br/><br/>
+  result1 : <span class="result"></span><br/><br/>
+  result2 : <span class="result"></span><br/><br/>
+  result3 : <span class="result"></span><br/><br/>
+  result4 : <span class="result"></span><br/><br/>
+  result5 : <span class="result"></span><br/><br/>
+  result6 : <span class="result"></span><br/><br/>
+  result7 : <span class="result"></span><br/><br/>
+  result8 : <span class="result"></span><br/><br/>
+  result9 : <span class="result"></span><br/><br/>
+  result10 : <span class="result"></span><br/><br/>
+  result11 : <span class="result"></span><br/><br/>
+  result12 : <span class="result"></span><br/><br/>
+  result13 : <span class="result"></span><br/><br/>
+  result14 : <span class="result"></span><br/><br/>
+  result15 : <span class="result"></span><br/><br/>
+</body>
+
+</html>
+
+
+<script>
+  let results = [];
+  results[0] = undefined == null;
+  results[1] = undefined >= null;
+
+  /*
+  값 예측
+  */
+  results[2] = 5 > 4; // true
+  results[3] = "apple" > "pineapple"; // false
+  results[4] = "2" > "12"; // false : true임. 왜냐면 형이 같으니까.
+  results[5] = undefined == null; // true
+  results[6] = undefined === null; // false
+  results[7] = null == "\n0\n"; // false
+  results[8] = null === +"\n0\n"; // false
+
+  $$result = document.querySelectorAll('.result');
+
+  for (let i = 0; i < $$result.length; i++) {
+    $$result[i].innerText = results[i];
+  }
+</script>
