@@ -1,0 +1,24 @@
+<script>
+/* 2024-10-12 심볼 공부 5 */
+/*
+심볼형이 자동으로 문자형으로 변환되지 않는다고 한다. 그럼 문자형으로 변환되는 모든 케이스에서 전부 안 되는 것일까?
+*/
+
+let id = Symbol("문자형");
+
+// case 1
+// alert( id ); // Uncaught TypeError: Cannot convert a Symbol value to a string
+
+// case 2
+console.log(+id); // Uncaught TypeError: Cannot convert a Symbol value to a number
+
+// case 3
+if (id == "Symbol(문자형)") {
+  console.log("문자형으로 변환 되어버리고 말았습니다.");
+} else {
+  console.log("심볼은 문자형으로 자동 변환되지 않는다.")
+}
+</script>
+<body>
+
+</body>
