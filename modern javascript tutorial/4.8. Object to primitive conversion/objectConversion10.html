@@ -1,0 +1,16 @@
+<script>
+/*
+2024-10-16 객체의 형 변환 공부 10
+*/
+let obj = {
+  name: "jyPark",
+};
+
+alert(obj); // obj는 문자열로 형변환된다. 이 때, hint는 string이다.
+
+let obj2 = {
+  "[object Object]": "문자열로 변환!",
+};
+
+console.log(obj2[obj]); // "문자열로 변환!"
+</script>

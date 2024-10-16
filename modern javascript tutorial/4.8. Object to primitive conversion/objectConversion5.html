@@ -1,0 +1,17 @@
+<script>
+/*
+2024-10-16 객체의 형 변환 공부 5
+*/
+let obj = {
+  name: "myLove",
+};
+
+let another = {
+  "[object Object]": "yes!",
+}
+
+console.log(obj); // {name: 'myLove'}
+alert(obj); // [object Object]
+
+console.log(another[obj]); // yes!
+</script>

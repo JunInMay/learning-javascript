@@ -1,0 +1,19 @@
+<script>
+/*
+2024-10-16 객체의 형 변환 공부 13
+*/
+let obj = {
+  name: "myLove",
+  age: 20,
+  valueOf: function() {
+    return {};
+  },
+  toString: function() {
+    return 1;
+  },
+};
+
+alert(obj); // hint : string, toString() 실행 : 1
+alert(+obj); // hint : number, valueOf() 실행 -> valueOf() 가 임의 객체를 반환하므로 toString() 대신 실행 : 1
+alert(obj + 500); // hint : default, valueOf() 실행 -> valueOf() 가 임의 객체를 반환하므로 toString() 대신 실행 : 501
+</script>

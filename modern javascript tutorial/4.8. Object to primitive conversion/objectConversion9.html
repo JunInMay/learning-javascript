@@ -1,0 +1,26 @@
+<script>
+/*
+2024-10-16 객체의 형 변환 공부 9
+https://ko.javascript.info/object-toprimitive
+대체 valueOf와 toString이 객체를 반환해도 에러가 안 난다는 말은 뭐지?
+*/
+let obj = {
+  name: "myLove",
+  age: 20,
+  valueOf: function() {
+    return 3;
+  },
+  toString: function() {
+    return 10;
+  },
+};
+
+let otherObj = {
+  "3": 30,
+  "10": 100,
+}
+
+console.log(obj * 4); // hint : number 이므로 3 * 4 = 12
+console.log(obj + 4); // hint : default 이므로 3 + 4 = 7
+console.log(otherObj[obj]); // hit : string, otherObj["10"] = 100
+</script>

@@ -1,0 +1,19 @@
+<script>
+/*
+2024-10-16 객체의 형 변환 공부 14
+*/
+let obj = {
+  name: "myLove",
+  age: 20,
+  valueOf: function() {
+    return {};
+  },
+  toString: function() {
+    return {};
+  },
+};
+
+alert(obj); // hint : string, TypeError: Cannot convert object to primitive value
+alert(+obj); // hint : number, TypeError: Cannot convert object to primitive value
+alert(obj + 500); // hint : default, TypeError: Cannot convert object to primitive value
+</script>

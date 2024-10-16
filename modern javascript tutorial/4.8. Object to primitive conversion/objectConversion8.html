@@ -1,0 +1,23 @@
+<script>
+/*
+2024-10-16 객체의 형 변환 공부 8
+https://ko.javascript.info/object-toprimitive
+대체 valueOf와 toString이 객체를 반환해도 에러가 안 난다는 말은 뭐지?
+*/
+let obj = {
+  name: "myLove",
+  age: 20,
+  valueOf: function() {
+    return {name: "valueOf 객체"};
+  },
+  toString: function() {
+    return "원시값을 반환해야 하던데.. 그러지 않으면 에러가 난다."
+  },
+};
+
+alert(obj); // 원시값을 반환해야 하던데.. 그러지 않으면 에러가 난다.
+obj.toString = function() {
+  return {name: "toString 반환 객체"}
+};
+alert(obj); // TypeError
+</script>
