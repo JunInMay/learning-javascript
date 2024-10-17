@@ -1,0 +1,14 @@
+<script>
+/*
+2024-10-17 객체의 형 변환 공부 15
+*/
+let obj = {
+  name: "myLove",
+  age: 20,
+  [Symbol.toPrimitive]: function(hint) {
+    return hint == "string" ? {} : {};
+  }
+};
+
+alert(obj); // hint : string, TypeError: Cannot convert object to primitive value
+</script>

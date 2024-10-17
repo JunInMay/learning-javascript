@@ -1,0 +1,31 @@
+<script>
+/*
+2024-10-17 객체의 형 변환 공부 17
+*/
+let obj1 = {
+  name: "myLove",
+  age: 20,
+  [Symbol.toPrimitive]: function(hint) {
+    return hint == "string" ? this.name : this.age;
+  }
+};
+
+let obj2 = {
+  name: "myLove",
+  age: 20,
+  toString: function() {
+    return this.name;
+  },
+  valueOf: function() {
+    return this.age;
+  }
+};
+
+/* toPrimitive로 만드나, toString & valueOf 로 만드나 똑같은 결과가 나온다. */
+alert(obj1); // hint : string : myLove
+alert(+obj1); // hint : number : 20
+alert(obj1 + 500); // hint : default : 520
+alert(obj2); // hint : string : myLove
+alert(+obj2); // hint : number : 20
+alert(obj2 + 500); // hint : default : 520
+</script>
